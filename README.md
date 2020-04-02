@@ -6,7 +6,7 @@ NLP中的机器阅读理解,能根据问题找到答案在文档中的位置
 
 ## 1.WordEmbedding:
 
-Forwordembedding, I used pre-trained word2vecmodel glove-wiki-gigaword-100. However, since there are a lot of symbols and numbers inside my vocabulary, when creating the embedding matrix for the embedding layer, I found almost half of the vocabulary does not have embedding in this model. I then trained my own Skip Gram model using Gensim library to provide embeddings for words that are not in the pre-trained model. The output shape of each document is then (1018,100) in which 1018 is the maximum length of the documents, and 100 is the embedding size for each word.
+For word embedding, I used pre-trained word2vecmodel glove-wiki-gigaword-100. However, since there are a lot of symbols and numbers inside my vocabulary, when creating the embedding matrix for the embedding layer, I found almost half of the vocabulary does not have embedding in this model. I then trained my own Skip Gram model using Gensim library to provide embeddings for words that are not in the pre-trained model. The output shape of each document is then (1018,100) in which 1018 is the maximum length of the documents, and 100 is the embedding size for each word.
 
 ### TF-IDF: 
 
